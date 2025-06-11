@@ -9,3 +9,129 @@ body {
   line-height: var(--sm-line-height);
   background-color: var(--default-blk);
 }
+
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+/*공통 영역*/
+.con {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*헤더*/
+header {
+  width: 100%;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: background-color, height 0.5s ease-in-out;
+}
+
+header .con {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*로고*/
+h1 {
+  width: fit-content;
+  height: fit-content;
+  margin: auto 0;
+}
+
+h1 a {
+  /*로고를 검정색에서 흰색으로 색상 반전*/
+  filter: invert(1);
+}
+
+/*메뉴*/
+#gnb {
+  width: fit-content;
+  height: 100%;
+}
+
+#gnb > ul {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  gap: 40px;
+  line-height: 80px;
+  /*단어의 첫글자만 대문자로*/
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#gnb > ul > li {
+  width: 150px;
+  position: relative;
+}
+
+#gnb > ul > li > a {
+  display: block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+#gnb > ul > li:hover > a {
+  color: var(--main-color);
+}
+
+/*2차 메뉴*/
+.submenu {
+  width: 100%;
+  height: 0;
+  line-height: var(--md-line-height);
+  position: absolute;
+  top: 100px;
+  transition: 0.5s;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.submenu > li {
+  height: fit-content;
+}
+
+.submenu > li > a {
+  display: block;
+  transition: 0.3s;
+}
+
+.submenu > li:hover > a {
+  color: var(--main-color);
+}
+
+#gnb:hover .submenu {
+  height: 152px;
+}
+
+/*submenu 뒤에 있는 전체 배경*/
+#gnb::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 1px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  transition: height 0.5s ease-in-out, background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header:hover {
+  border-bottom: 1px solid #000;
+}
+
+#gnb:hover::after {
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #ddd;
+}
