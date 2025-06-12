@@ -72,7 +72,6 @@ We continuously update the resources required for services through deep learning
 
 Voyager's Journey
 (카드 문구)
-Directions
 cooperation
 If you want to collaborate with us, come here.
 
@@ -82,7 +81,7 @@ Are you looking for a companion to join you on your journey?
 
 
 Official Document
-Find various features and options in the official documentation..
+Find various features and options in the official documentation.
 
 Directions
 The first step in the journey.

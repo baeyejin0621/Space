@@ -479,3 +479,154 @@ section {
   font-size: var(--md-font-size);
   font-weight: 200;
 }
+
+/*다섯번째 섹션*/
+.sec5 {
+  padding: 200px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.sec5 > .con {
+  position: relative;
+  z-index: 20;
+}
+
+.sec5 > .con > h2 > br {
+  display: none;
+}
+
+.card_wrap {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+.card_wrap .card {
+  width: calc(25% - 20px);
+  height: fit-content;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  will-change: width, flex;
+}
+
+.card_wrap .card:hover {
+  width: calc(28% - 20px);
+}
+
+.card .img_area {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card .img_area > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: grayscale(70%);
+  transition: 0.3s;
+}
+
+.card:hover .img_area {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card:hover .img_area > img {
+  filter: grayscale(0) drop-shadow(3px 3px 3px rgb(86, 9, 211));
+}
+
+.card .text_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.card .text_wrap h3 {
+  font-size: var(--md-font-size);
+  margin-bottom: 20px;
+}
+
+.card .text_wrap p {
+  height: 120px;
+}
+
+.card .text_wrap .more:hover {
+  color: var(--sub-color);
+  border: 1px solid var(--sub-color);
+}
+
+/*롤링 텍스트*/
+.rolling {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: clamp(50px, 6vw, 100px);
+  font-weight: 800;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  transform: rotate(10deg);
+}
+
+.rolling div {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  will-change: transform;
+  width: max-content;
+}
+
+.rolling div p {
+  flex-shrink: 0;
+}
+
+.rolling div p:nth-child(even) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--main-color);
+}
+
+.rolling div p:nth-child(odd) {
+  color: var(--main-color);
+}
+
+.fill_text {
+  animation: rolling1 12s linear infinite reverse;
+}
+
+.fill_text p:last-child {
+  margin-right: 30px;
+}
+
+.line_text {
+  animation: rolling2 12s linear infinite reverse;
+}
+
+@keyframes rolling1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rolling2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
