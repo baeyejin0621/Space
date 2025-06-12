@@ -180,7 +180,7 @@ section {
   align-items: center;
 }
 
-.main_visual .visual_text {
+.visual_text {
   width: 50%;
   box-sizing: border-box;
   text-align: center;
@@ -223,7 +223,7 @@ section {
   }
 }
 
-.main_visual .visual_video {
+.visual_video {
   width: 50%;
   height: 100vh;
   overflow: hidden;
@@ -245,4 +245,37 @@ section {
 
 .scroll_down:hover {
   bottom: 55px;
+}
+
+/*두번째 섹션*/
+#sec2 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+#sec2 .rocket {
+  position: absolute;
+  left: -200px;
+  font-size: clamp(80px, 6vw, 100px);
+  animation: rocket 5s linear 1s 1;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+#sec2:hover .rocket {
+  animation-play-state: running;
+}
+
+@keyframes rocket {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(105vw) rotate(360deg);
+  }
 }
