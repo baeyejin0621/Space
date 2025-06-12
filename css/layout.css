@@ -135,3 +135,31 @@ header:hover {
   background-color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid #ddd;
 }
+
+/*아이콘*/
+.icons {
+  width: fit-content;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.icons > a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+.icons > a:hover {
+  color: var(--default-blk);
+  background-color: var(--sub-color);
+  border-radius: 100%;
+}
+
+.icons > a:last-child {
+  display: none;
+}
