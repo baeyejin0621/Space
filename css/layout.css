@@ -279,3 +279,53 @@ section {
     transform: translateX(105vw) rotate(360deg);
   }
 }
+
+/*세번째 섹션*/
+.sec3 {
+  padding: 200px 0;
+}
+
+.sec_title {
+  font-size: var(--xl-font-size);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sec_title + p {
+  font-size: var(--md-font-size);
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.icon_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.icon_content > div div {
+  transition: 0.5s;
+}
+
+.icon_content > div:hover div {
+  color: var(--sub-color);
+  transform: translateY(-10px);
+}
+
+.text_bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.text_bottom > h3 {
+  font-weight: 600;
+}
+
+.text_bottom > p {
+  font-weight: 200;
+}
