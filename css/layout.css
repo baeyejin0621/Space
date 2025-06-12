@@ -372,7 +372,7 @@ section {
 .sec4 > .con > .heading_left {
   width: clamp(480px, 30%, 480px);
   /*sticky가 움직일 수 있는 공간*/
-  height: 1300px;
+  height: 1320px;
   position: relative;
 }
 
@@ -416,4 +416,66 @@ section {
 
 .more:hover i {
   transform: rotate(360deg);
+}
+
+/*오른쪽 컨텐츠 영역*/
+.right_con {
+  width: 70%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+.data_box {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 20px;
+  /*transition에 의해 변화할 속성들 정의*/
+  transition-property: width, border-bottom, color;
+  /*width는 0.8초, border-bottom은 0.1초, color는 0.5초 동안 변함*/
+  transition-duration: 0.8s, 0.1s, 0.5s;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.data_box:hover {
+  width: 70%;
+  border-bottom: 3px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.data_box img {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.data_box:hover img {
+  transform: translateX(-320px);
+  opacity: 1;
+}
+
+.data_box h4 {
+  font-weight: 600;
+  line-height: var(--md-line-height);
+}
+
+.data_box h3 {
+  font-size: var(--xl-font-size);
+  font-weight: 400;
+  line-height: var(--lg-line-height);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.data_box p {
+  font-size: var(--md-font-size);
+  font-weight: 200;
 }
