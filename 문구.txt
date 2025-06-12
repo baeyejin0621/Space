@@ -90,3 +90,20 @@ How to come to our company.
 
 [footer]
 © 2024 Explorer Corp. All rights reserved.
+
+[아이콘 폰트]
+로그인 : xi-user-o
+메뉴 : xi-bars
+메인비주얼에 아래 화살표 : xi-angle-down-thin xi-4x
+
+세번째 섹션
+아이콘1 : xi-code xi-5x
+아이콘2 : xi-text-type xi-5x
+아이콘3 : xi-at xi-5x
+
+버튼에 있는 + : xi-plus
+
+푸터 아이콘1 : xi-stack-overflow
+푸터 아이콘2 :xi-youtube-play
+푸터 아이콘3 :xi-github
+푸터 아이콘4 :xi-instagram
