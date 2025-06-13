@@ -44,7 +44,7 @@ header .con {
 h1 {
   width: fit-content;
   height: fit-content;
-  margin: auto 0;
+  margin: 30px 0;
 }
 
 h1 a {
@@ -428,6 +428,7 @@ section {
   align-items: flex-end;
   gap: 40px;
 }
+
 .data_box {
   position: relative;
   width: 60%;
